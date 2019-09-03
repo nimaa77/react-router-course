@@ -13,7 +13,7 @@ function Header(props) {
   const [open, setOpen] = React.useState(false)
   return (
     <Navbar color="light" light expand="md">
-      <NavbarBrand href="/">فروشگاه تست</NavbarBrand>
+      <NavbarBrand href="/">تست</NavbarBrand>
       <NavbarToggler onClick={() => setOpen((o) => !o)} />
       <Collapse isOpen={open} navbar>
         <Nav className="ml-auto" navbar>
