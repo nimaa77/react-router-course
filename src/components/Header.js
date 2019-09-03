@@ -25,11 +25,11 @@ function Header(props) {
           <NavItem>
             <NavLink
               exact
-              to="/shop"
+              to="/blog"
               className="nav-link"
               activeClassName="active"
             >
-              فروشگاه
+              وبلاگ
             </NavLink>
           </NavItem>
           <NavItem>

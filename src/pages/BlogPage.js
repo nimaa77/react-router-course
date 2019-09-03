@@ -1,5 +1,6 @@
 import React from "react"
-import { Card, CardText, CardBody, CardTitle } from "reactstrap"
+import { Card, CardBody, CardTitle } from "reactstrap"
+import { Link } from "react-router-dom"
 
 import useBlog from "hooks/useBlog"
 
@@ -17,12 +18,13 @@ function Blog(props) {
   )
 }
 
-function Post({ title, body }) {
+function Post({ title, body, id }) {
   return (
     <Card>
       <CardBody>
-        <CardTitle>{title}</CardTitle>
-        <CardText>{body}</CardText>
+        <Link to={`/to/post/${id}`}>
+          <CardTitle>{title}</CardTitle>
+        </Link>
       </CardBody>
     </Card>
   )

@@ -13,8 +13,17 @@ body {
 }
 
 footer {
-  position: absolute;
-  bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
   width: 100%;
   text-align: center;
+  background: white;
+}
+
+.App {
+  text-align: center;
+  margin-top: 50vh;
+  font-size: 50px;
+  transform: translateY(-50%);
 }
