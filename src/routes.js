@@ -2,6 +2,7 @@ import HomePage from "pages/HomePage"
 import AboutUs from "pages/AboutUsPage"
 import Post from "pages/PostPage"
 import Blog from "pages/BlogPage"
+import NotFound from "pages/NotFound"
 
 const routes = [
   {
@@ -20,6 +21,9 @@ const routes = [
   {
     path: "/post",
     component: Post,
+  },
+  {
+    component: NotFound,
   },
 ]
 
