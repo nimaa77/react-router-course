@@ -5,11 +5,13 @@ function useBlog() {
   const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
+    let mounted = true
     fetch("https://jsonplaceholder.ir/posts")
       .then((response) => response.json())
-      .then(setData)
+      .then((data) => mounted && setData(data))
       .then(false)
       .then(setLoading)
+    return () => (mounted = false)
   }, [])
 
   return [loading, data]
