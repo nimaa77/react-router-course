@@ -1,25 +1,24 @@
 import React from "react"
-import { Formik } from "formik"
-import { withRouter } from "react-router-dom"
+import { Formik, Form } from "formik"
 
-function Login({ history }) {
+function Login() {
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
       onSubmit={(values, actions) => {
-        if (values.name === "nima@arefi.com" && values.password === "admin") {
-          history.push("/")
+        if (values.email === "nima@arefi.com" && values.password === "admin") {
+          //
         } else {
           actions.setFieldError("email", "نام کاربری یا رمزعبور اشتباه است")
         }
         actions.setSubmitting(false)
       }}
       render={(props) => (
-        <form onSubmit={props.handleSubmit}>
+        <Form>
           <div className="form-group">
             <label>ایمیل</label>
             <input
-              className="form-control w-25"
+              className="form-control w-25 ltr"
               type="email"
               onChange={props.handleChange}
               onBlur={props.handleBlur}
@@ -30,8 +29,8 @@ function Login({ history }) {
           <div className="form-group">
             <label>رمزعبور</label>
             <input
-              className="form-control w-25"
-              type="text"
+              className="form-control w-25 ltr"
+              type="password"
               onChange={props.handleChange}
               onBlur={props.handleBlur}
               value={props.values.password}
@@ -51,10 +50,10 @@ function Login({ history }) {
           >
             ورود
           </button>
-        </form>
+        </Form>
       )}
     />
   )
 }
 
-export default withRouter(Login)
+export default Login
