@@ -42,6 +42,16 @@ function Header(props) {
               درباره ما
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink
+              exact
+              to="/login"
+              className="nav-link"
+              activeClassName="active"
+            >
+              ورود به حساب کاربری
+            </NavLink>
+          </NavItem>
         </Nav>
       </Collapse>
     </Navbar>
