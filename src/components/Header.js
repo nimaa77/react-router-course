@@ -9,8 +9,11 @@ import {
 } from "reactstrap"
 import { NavLink } from "react-router-dom"
 
+import useAuth from "hooks/useAuth"
+
 function Header(props) {
   const [open, setOpen] = React.useState(false)
+  const isLoggedIn = useAuth()
   return (
     <Navbar color="light" light expand="md">
       <NavbarBrand href="/">تست</NavbarBrand>
@@ -45,11 +48,11 @@ function Header(props) {
           <NavItem>
             <NavLink
               exact
-              to="/login"
+              to={isLoggedIn ? "/profile" : "/login"}
               className="nav-link"
               activeClassName="active"
             >
-              ورود به حساب کاربری
+              {isLoggedIn ? "خوش آمدید" : "ورود به حساب کاربری"}
             </NavLink>
           </NavItem>
         </Nav>

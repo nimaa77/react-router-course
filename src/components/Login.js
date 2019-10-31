@@ -1,13 +1,18 @@
 import React from "react"
 import { Formik, Form } from "formik"
+import useAuthActions from "hooks/useAuthActions"
+import useHistory from "hooks/useHistory"
 
 function Login() {
+  const setLogin = useAuthActions()
+  const history = useHistory()
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
       onSubmit={(values, actions) => {
         if (values.email === "nima@arefi.com" && values.password === "admin") {
-          //
+          setLogin(true)
+          history.push("/profile")
         } else {
           actions.setFieldError("email", "نام کاربری یا رمزعبور اشتباه است")
         }
