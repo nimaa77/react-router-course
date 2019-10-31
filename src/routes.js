@@ -5,6 +5,7 @@ import Blog from "pages/BlogPage"
 import NotFound from "pages/NotFound"
 import Example from "pages/Example"
 import Login from "pages/LoginPage"
+import ProfilePage from "pages/ProfilePage"
 
 const routes = [
   {
@@ -23,6 +24,10 @@ const routes = [
   {
     path: "/post",
     component: Post,
+  },
+  {
+    path: "/profile",
+    component: ProfilePage,
   },
   {
     path: "/example/:sort(asc|dec)?",
