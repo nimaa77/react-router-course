@@ -26,6 +26,7 @@ const routes = [
     component: Post,
   },
   {
+    private: true,
     path: "/profile",
     component: ProfilePage,
   },
