@@ -6,6 +6,7 @@ import NotFound from "pages/NotFound"
 import Example from "pages/Example"
 import Login from "pages/LoginPage"
 import ProfilePage from "pages/ProfilePage"
+import LogoutPage from "pages/LogoutPage"
 
 const routes = [
   {
@@ -37,6 +38,10 @@ const routes = [
   {
     path: "/login",
     component: Login,
+  },
+  {
+    path: "/logout",
+    component: LogoutPage,
   },
   {
     component: NotFound,

@@ -55,6 +55,18 @@ function Header(props) {
               {isLoggedIn ? "خوش آمدید" : "ورود به حساب کاربری"}
             </NavLink>
           </NavItem>
+          {isLoggedIn && (
+            <NavItem>
+              <NavLink
+                exact
+                to="/logout"
+                className="nav-link"
+                activeClassName="active"
+              >
+                خروج
+              </NavLink>
+            </NavItem>
+          )}
         </Nav>
       </Collapse>
     </Navbar>
