@@ -5,7 +5,9 @@ function ProfilePage() {
   return (
     <div>
       <Jumbotron>
-        <Container>شما به حساب کاربری خود وارد شده اید.</Container>
+        <Container>
+          اینجا صفحه‌ایی است که شما بعد از لاگین شدن می‌توانید ببینید.
+        </Container>
       </Jumbotron>
     </div>
   )
